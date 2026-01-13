@@ -112,6 +112,11 @@ Create `frontend/.env`:
 ```env
 VITE_API_BASE_URL=http://localhost:5000/api
 ```
+Foe Docker use
+Create `frontend/.env.production`:
+```env
+VITE_API_BASE_URL=/api
+```
 
 ## 🐳 Docker Services
 
