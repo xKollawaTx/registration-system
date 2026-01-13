@@ -30,13 +30,22 @@ This registration system consists of a React frontend and Node.js backend with M
    git clone <repository-url>
    cd registration-system
    ```
+2. Create `backend/.env`:
+   ```env
+   PORT=5000
+   MONGO_URI=mongodb://mongo:27017/registration_system
+   ```
+3. Create `frontend/.env.production`:
+   ```env
+   VITE_API_BASE_URL=/api
+   ```
 
-2. Start all services:
+4. Start all services:
    ```bash
    docker-compose up
    ```
 
-3. Access the applications:
+5. Access the applications:
    - Frontend: http://localhost:3000
    - Backend API: http://localhost:5000
    - Backend Health: http://localhost:5000/health
@@ -111,11 +120,6 @@ MONGO_URI=mongodb://localhost:27017/registration_system
 Create `frontend/.env`:
 ```env
 VITE_API_BASE_URL=http://localhost:5000/api
-```
-Foe Docker use
-Create `frontend/.env.production`:
-```env
-VITE_API_BASE_URL=/api
 ```
 
 ## 🐳 Docker Services
