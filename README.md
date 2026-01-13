@@ -113,23 +113,6 @@ Create `frontend/.env`:
 VITE_API_BASE_URL=http://localhost:5000/api
 ```
 
-## 🌐 API Endpoints
-
-### Health Check
-- `GET /health` - Server health status
-
-### Registration
-- `POST /api/register` - Create new registration
-- `GET /api/register` - Get all registrations
-
-### Statistics
-- `GET /api/stats` - Get system statistics
-
-### Admin
-- `GET /api/admin/users` - Get all users
-- `PUT /api/admin/users/:id` - Update user
-- `DELETE /api/admin/users/:id` - Delete user
-
 ## 🐳 Docker Services
 
 The application consists of three main services:
@@ -156,58 +139,3 @@ docker-compose logs -f
 # Rebuild and start
 docker-compose up --build
 ```
-
-## 📊 Application Routes
-
-### Frontend Routes
-- `/` - User registration page
-- `/admin` - Admin dashboard
-
-### Backend Routes
-- `/health` - Health check
-- `/api/*` - API endpoints
-
-## 🔍 Development Workflow
-
-1. **Setup Development Environment**
-   - Install dependencies
-   - Configure environment variables
-   - Start database
-
-2. **Backend Development**
-   - Use `npm run dev` for hot-reload
-   - Test API endpoints
-   - Run database seeds with `npm run seed`
-
-3. **Frontend Development**
-   - Use `npm run dev` for hot-reload
-   - Test UI components
-   - Verify API integration
-
-4. **Testing**
-   - Test user registration flow
-   - Test admin functionality
-   - Verify responsive design
-
-## 🚨 Error Handling
-
-The application includes comprehensive error handling:
-- Frontend: API errors, form validation, network issues
-- Backend: Database errors, validation errors, server errors
-- Global: Error boundaries, logging, user feedback
-
-## 🔒 Security Considerations
-
-- Input validation with Joi
-- CORS configuration
-- Environment variable protection
-- Error message sanitization
-- Secure HTTP headers (Nginx)
-
-
-## 📞 Support
-
-For support and questions:
-- Check the individual README files in `backend/` and `frontend/`
-- Review the API documentation
-- Check Docker logs for deployment issues
